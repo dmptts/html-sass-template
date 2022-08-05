@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production gulp js",
-    "dev": "cross-env NODE_ENV=development gulp js"
+    "build": "cross-env NODE_ENV=production gulp build",
+    "dev": "cross-env NODE_ENV=development gulp build"
   },
   "author": "Dmitriy Solovev",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "gulp": "^4.0.2",
+    "html-loader": "^4.1.0",
     "prettier": "^2.7.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
