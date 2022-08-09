@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "stylelint": "stylelint \"src/scss/**/*.scss\"",
+    "eslint": "eslint src/js/**/*.js",
     "build": "cross-env NODE_ENV=production gulp build",
-    "start": "cross-env NODE_ENV=production gulp start"
+    "start": "cross-env NODE_ENV=development gulp start",
+    "test": "npm run eslint & npm run stylelint"
   },
   "author": "Dmitriy Solovev",
   "license": "ISC",
@@ -20,12 +23,25 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
     "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "html-loader": "^4.1.0",
     "prettier": "^2.7.1",
+    "sass": "^1.54.3",
     "stylelint": "^14.9.1",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "stylelint-order": "^5.0.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-stream": "^7.0.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
