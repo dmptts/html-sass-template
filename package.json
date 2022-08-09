@@ -8,7 +8,8 @@
     "eslint": "eslint src/js/**/*.js",
     "build": "cross-env NODE_ENV=production gulp build",
     "start": "cross-env NODE_ENV=development gulp start",
-    "test": "npm run eslint & npm run stylelint"
+    "test": "npm run eslint & npm run stylelint",
+    "prepare": "husky install"
   },
   "author": "Dmitriy Solovev",
   "license": "ISC",
@@ -31,6 +32,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "html-loader": "^4.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "sass": "^1.54.3",
     "stylelint": "^14.9.1",
@@ -43,5 +46,9 @@
   },
   "browserslist": [
     "last 2 versions"
-  ]
+  ],
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.scss": "stylelint --fix"
+  }
 }
