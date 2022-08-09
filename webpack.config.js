@@ -10,7 +10,7 @@ module.exports = {
   devtool: isDev ? 'source-map' : false,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: isDev ? './bundle.js' : `./bundle.[contenthash].js`,
+    filename: './bundle.js',
   },
   optimization: {
     minimize: isProd,
