@@ -1,6 +1,6 @@
-.container {
-  h1 {
-    display: block;
-    font-size: 48px;
-  }
-}
+@import "./vendor/normalize";
+@import "./variables";
+@import "./mixins";
+@import "./global/fonts";
+@import "./global/reboot";
+@import "./global/container";
